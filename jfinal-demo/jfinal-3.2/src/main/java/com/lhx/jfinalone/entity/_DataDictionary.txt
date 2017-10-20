@@ -1,0 +1,52 @@
+Table: login_log
+------------+--------------+------+-----+---------+---------
+ Field      | Type         | Null | Key | Default | Remarks 
+------------+--------------+------+-----+---------+---------
+ id         | INT(10)      | NO   | PRI |         |         
+ type       | VARCHAR(255) | NO   |     |         |         
+ uid        | INT(10)      | NO   |     |         |         
+ ip         | VARCHAR(255) | NO   |     |         |         
+ createTime | DATETIME(19) | NO   |     |         |         
+------------+--------------+------+-----+---------+---------
+
+Table: operate_log
+------------+----------------------+------+-----+---------+---------
+ Field      | Type                 | Null | Key | Default | Remarks 
+------------+----------------------+------+-----+---------+---------
+ id         | INT(10)              | NO   | PRI |         |         
+ type       | VARCHAR(255)         | NO   |     |         |         
+ accessName | VARCHAR(255)         | NO   |     |         |         
+ accessPath | VARCHAR(255)         | NO   |     |         |         
+ creater    | INT(10)              | NO   |     |         |         
+ date       | DATETIME(19)         | NO   |     |         |         
+ params     | LONGTEXT(2147483647) | YES  |     |         |         
+------------+----------------------+------+-----+---------+---------
+
+Table: sys_group
+------------+----------------------+------+-----+---------+---------
+ Field      | Type                 | Null | Key | Default | Remarks 
+------------+----------------------+------+-----+---------+---------
+ id         | INT(10)              | NO   | PRI |         |         
+ name       | VARCHAR(255)         | NO   |     |         |         
+ type       | INT(10)              | NO   |     |         |         
+ groupAuth  | LONGTEXT(2147483647) | YES  |     |         |         
+ creater    | INT(10)              | NO   |     |         |         
+ createTime | DATETIME(19)         | NO   |     |         |         
+------------+----------------------+------+-----+---------+---------
+
+Table: sys_user
+------------+----------------------+------+-----+---------+---------
+ Field      | Type                 | Null | Key | Default | Remarks 
+------------+----------------------+------+-----+---------+---------
+ id         | INT(10)              | NO   | PRI |         |         
+ groupId    | INT(10)              | NO   |     |         |         
+ userName   | VARCHAR(255)         | NO   |     |         |         
+ nickName   | VARCHAR(255)         | NO   |     |         |         
+ password   | VARCHAR(255)         | NO   |     |         |         
+ userAuth   | LONGTEXT(2147483647) | YES  |     |         |         
+ creater    | INT(10)              | NO   |     |         |         
+ createTime | DATETIME(19)         | NO   |     |         |         
+ status     | INT(10)              | NO   |     | 0       |         
+ lastLogin  | DATETIME(19)         | YES  |     |         |         
+------------+----------------------+------+-----+---------+---------
+

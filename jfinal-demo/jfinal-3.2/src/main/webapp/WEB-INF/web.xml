@@ -1,0 +1,25 @@
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+    http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <display-name>jfinal3.2</display-name>
+    
+    <filter>
+        <filter-name>jfinal</filter-name>
+        <filter-class>com.jfinal.core.JFinalFilter</filter-class>
+        <init-param>
+            <param-name>configClass</param-name>
+            <param-value>com.lhx.jfinalone.config.JFWebConfig</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>jfinal</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
